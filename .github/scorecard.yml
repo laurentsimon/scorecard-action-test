@@ -1,0 +1,8 @@
+version: 1
+policies:
+  Token-Permissions:
+      score: 10
+      mode: enforced
+  Branch-Protection:
+      score: 10
+      mode: enforced
