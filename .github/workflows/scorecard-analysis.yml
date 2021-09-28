@@ -1,8 +1,11 @@
 name: Scorecard analysis workflow
 on: 
   push:
-    branches: [main]
+    # Only the default branch is supported.
+    branches: [main, master]
   pull_request:
+    # All branches are supported.
+    branches: [main]
 
 permissions: read-all
 
@@ -14,15 +17,19 @@ jobs:
       security-events: write
     
     steps:
-      # TODO: if pull_request
       - name: "Checkout code"
+        # https://docs.github.com/en/actions/learn-github-actions/expressions.
+        if: ${{ github.event_name == 'refs/heads/main' || github.event_name == 'refs/heads/master' }}
         uses: actions/checkout@v1
 
       - name: "Run analysis"
-        #uses: docker://ossf/scorecard/analyze@sha256:xxx
-        uses: docker://laurentsimon/scorecard-action:latest
+        # This is temporary for dogfooding.
+        # We will remove the use of container and
+        # pin the dependency by hash.
+        # https://github.com/ossf/scorecard/issues/1072. 
+        uses: docker://laurentsimon/scorecard-action:dogfood
         with:
-          policy_file: .github/scorecard.yml
+          policy_file: .github/scorecard-policy.yml
           sarif_file: results.sarif
           repo_token: ${{ secrets.GITHUB_TOKEN }}
 
