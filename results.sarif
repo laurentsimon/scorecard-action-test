@@ -1,0 +1,132 @@
+{
+   "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+   "version": "2.1.0",
+   "runs": [
+      {
+         "automationDetails": {
+            "id": "supply-chain/scorecard/ccbc59901773ab4c051dfcea0cc4201a1567abdd-17 Aug 21 18:57 +0000"
+         },
+         "tool": {
+            "driver": {
+               "name": "Scorecard",
+               "informationUri": "https://github.com/ossf/scorecard2",
+               "semanticVersion": "1.2.4",
+               "rules": [
+                  {
+                     "id": "Check-Name1",
+                     "name": "Check-Name1",
+                     "helpUri": "https://github.com/ossf/scorecard/blob/main/docs/checks.md#check-name",
+                     "shortDescription": {
+                        "text": "short description"
+                     },
+                     "fullDescription": {
+                        "text": "long description\u003cbr\u003e other line"
+                     },
+                     "help": {
+                        "text": "long description\n other line",
+                        "markdown": "long description   other line"
+                     },
+                     "defaultConfiguration": {
+                        "level": "error"
+                     },
+                     "properties": {
+                        "precision": "high",
+                        "tags": [
+                           "tag1",
+                           "tag2"
+                        ],
+                        "problem": {
+                            "severity": "error"
+                        },
+                        "security-severity": 9.0
+                     }
+                  }
+               ]
+            }
+         },
+         "results": [
+            {
+               "ruleId": "Check-Name1",
+               "level": "error",
+               "ruleIndex": 0,
+               "message": {
+                  "text": "half score reason 1"
+               },
+               "locations": [
+                  {
+                     "physicalLocation": {
+                        "region": {
+                           "startLine": 1,
+                           "snippet": {
+                              "text": "if (bad) {BUG1();}"
+                           }
+                        },
+                        "artifactLocation": {
+                           "uri": "test1",
+                           "uriBaseId": "%SRCROOT%"
+                        }
+                     },
+                     "message": {
+                        "text": "warn message"
+                     }
+                  }
+               ]
+            },
+            {
+               "ruleId": "Check-Name1",
+               "level": "error",
+               "ruleIndex": 0,
+               "message": {
+                  "text": "half score reason 2"
+               },
+               "locations": [
+                  {
+                     "physicalLocation": {
+                        "region": {
+                           "startLine": 1,
+                           "snippet": {
+                              "text": "if (bad) {BUG2();}"
+                           }
+                        },
+                        "artifactLocation": {
+                           "uri": "test2.cpp",
+                           "uriBaseId": "%SRCROOT%"
+                        }
+                     },
+                     "message": {
+                        "text": "warn message 2"
+                     }
+                  }
+               ]
+            },
+            {
+               "ruleId": "Check-Name1",
+               "level": "error",
+               "ruleIndex": 0,
+               "message": {
+                  "text": "half score reason 3"
+               },
+               "locations": [
+                  {
+                     "physicalLocation": {
+                        "region": {
+                           "startLine": 1,
+                           "snippet": {
+                              "text": "if (bad) {BUG3();}"
+                           }
+                        },
+                        "artifactLocation": {
+                           "uri": "test3",
+                           "uriBaseId": "%SRCROOT%"
+                        }
+                     },
+                     "message": {
+                        "text": "warn message 3"
+                     }
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
