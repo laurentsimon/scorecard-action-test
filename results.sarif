@@ -35,9 +35,6 @@
                            "tag1",
                            "tag2"
                         ],
-                        "id" : "my id",
-                        "kind" : "my kind",
-                        "name" : "name",
                         "problem.severity" : "error",
                         "security-severity" : "9.8"
                      }
