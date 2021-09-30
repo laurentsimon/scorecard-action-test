@@ -25,7 +25,7 @@ policies:
       score: 10
       mode: enforced
   Binary-Artifacts:
-      score: 10
+      score: 0
       mode: enforced
   Signed-Releases:
       score: 10
