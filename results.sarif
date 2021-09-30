@@ -20,11 +20,11 @@
                         "text": "short description text"
                      },
                      "fullDescription": {
-                        "text": "full description text\u003cbr\u003e other line"
+                        "text": "full description text\n other line"
                      },
                      "help": {
                         "text": "help text\n other line",
-                        "markdown": "help markdown   other line"
+                        "markdown": "help markdown\nother line"
                      },
                      "defaultConfiguration": {
                         "level": "error"
