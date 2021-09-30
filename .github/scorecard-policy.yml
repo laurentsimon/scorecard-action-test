@@ -14,7 +14,7 @@ policies:
       mode: enforced
   Security-Policy:
       score: 10
-      mode: enforced
+      mode: disabled
   SAST:
       score: 10
       mode: enforced
@@ -25,7 +25,7 @@ policies:
       score: 10
       mode: enforced
   Binary-Artifacts:
-      score: 0
+      score: 10
       mode: enforced
   Signed-Releases:
       score: 10
