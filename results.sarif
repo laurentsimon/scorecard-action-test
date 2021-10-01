@@ -24,7 +24,7 @@
                      },
                      "help": {
                         "text": "long description\n other line",
-                        "markdown": "**title1**:\n hello\n**title2**:\n- text1\n-text2\n**title3**:text1\ntext2"
+                        "markdown": "**title1**:\n hello\n\n**title2**:\n- text1\n -text2\n\n**title3**:text1\ntext2"
                      },
                      "defaultConfiguration": {
                         "level": "error"
